@@ -36,7 +36,7 @@ public class mesajAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View layout = LayoutInflater.from(context).inflate(R.layout.layout,parent,false);
+        View layout = LayoutInflater.from(context).inflate(R.layout.ilan_icerik,parent,false);
         ImageView img= layout.findViewById(R.id.kisiResim);
         TextView icerik=layout.findViewById(R.id.mesajIcerik);
         TextView kisi=layout.findViewById(R.id.kisiIsim);
