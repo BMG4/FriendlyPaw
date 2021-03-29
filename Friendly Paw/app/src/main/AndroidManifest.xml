@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FriendlyPaw">
-        <activity android:name=".Hakkinda"></activity>
+        <activity android:name=".Signup"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".Hakkinda" />
         <activity android:name=".Ilanlarim" />
         <activity android:name=".IlanVer" />
         <activity android:name=".Profil" />

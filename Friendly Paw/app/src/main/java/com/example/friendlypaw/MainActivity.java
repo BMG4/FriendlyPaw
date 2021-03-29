@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ClickProfil(View view){
-        redirectActivity(this,Profil.class);
+        redirectActivity(this,Login.class);
     }
 
     public void ClickilanVer(View view){
