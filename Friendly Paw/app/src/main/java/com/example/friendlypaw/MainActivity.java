@@ -13,7 +13,10 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.realm.Realm;
+
 public class MainActivity extends AppCompatActivity {
+    Realm realm;
     ListView lst;
     List<model> liste;
     mesajAdapter adp;
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tanımla() {
+        realm = Realm.getDefaultInstance();
         lst = findViewById(R.id.Listview);
         drawerLayout = findViewById(R.id.drawelayout);
     }
@@ -44,20 +48,23 @@ public class MainActivity extends AppCompatActivity {
         recreate();
     }
 
-    public void ClickProfil(View view){
-        redirectActivity(this,Login.class);
+    public void ClickProfil(View view) {
+        redirectActivity(this, Login.class);
     }
 
-    public void ClickilanVer(View view){
-        redirectActivity(this,IlanVer.class);
+    public void ClickilanVer(View view) {
+        redirectActivity(this, IlanVer.class);
     }
-    public void Clickilanlarim(View view){
-        redirectActivity(this,Ilanlarim.class);
+
+    public void Clickilanlarim(View view) {
+        redirectActivity(this, Ilanlarim.class);
     }
-    public void ClickHakkında(View view){
-        redirectActivity(this,Hakkinda.class);
+
+    public void ClickHakkında(View view) {
+        redirectActivity(this, Hakkinda.class);
     }
-    public void ClickCikis(View view){
+
+    public void ClickCikis(View view) {
         logout(this);
     }
 
@@ -66,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
         System.exit(0);
     }
 
-    public static void redirectActivity(Activity activity,Class aClass) {
-        Intent intent= new Intent(activity,aClass);
+    public static void redirectActivity(Activity activity, Class aClass) {
+        Intent intent = new Intent(activity, aClass);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         activity.startActivity(intent);
 
