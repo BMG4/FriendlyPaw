@@ -1,4 +1,4 @@
-package com.example.friendlypaw;
+package com.example.friendlypaw.Eklentiler;
 
 import android.app.Application;
 

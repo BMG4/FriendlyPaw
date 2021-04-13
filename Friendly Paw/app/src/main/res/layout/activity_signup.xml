@@ -28,12 +28,14 @@
 
     <EditText
         android:layout_width="match_parent"
+        android:id="@+id/sgnupName"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:hint="Name" />
 
     <EditText
         android:layout_width="match_parent"
+        android:id="@+id/sgnupSurname"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:hint="Surname" />
@@ -41,6 +43,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/sgnupMail"
         android:layout_marginBottom="10dp"
         android:hint="Mail" />
 
@@ -48,12 +51,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType = "textPassword"
+        android:id="@+id/sngupPassword"
         android:layout_marginBottom="10dp"
         android:hint="Password" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/sgnupPhone"
         android:layout_marginBottom="10dp"
         android:hint="Mobile Number" />
 
@@ -63,8 +68,31 @@
         android:text="Sign Up"
         android:gravity="center"
         android:textSize="20dp"
+        android:onClick="ClickSgnupOk"
         android:layout_gravity="center"
         android:background="@drawable/buton_arka_plan"
+        android:layout_marginBottom="20dp"
         android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold|italic"
+            android:layout_height="wrap_content"
+            android:text="have an account? "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold|italic"
+            android:textColor="#1DABB8"
+            android:onClick="ClickLogin"
+            android:layout_height="wrap_content"
+            android:text="Login" />
+    </LinearLayout>
 
 </LinearLayout>

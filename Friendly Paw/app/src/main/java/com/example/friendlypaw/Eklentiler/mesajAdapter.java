@@ -1,4 +1,4 @@
-package com.example.friendlypaw;
+package com.example.friendlypaw.Eklentiler;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.friendlypaw.R;
 
 import java.util.List;
 

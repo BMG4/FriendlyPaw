@@ -10,6 +10,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
+import com.example.friendlypaw.Eklentiler.mesajAdapter;
+import com.example.friendlypaw.Eklentiler.model;
+
 import java.util.ArrayList;
 import java.util.List;
 
