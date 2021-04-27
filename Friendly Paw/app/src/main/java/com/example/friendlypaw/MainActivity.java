@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
-import com.example.friendlypaw.Eklentiler.mesajAdapter;
+import com.example.friendlypaw.Eklentiler.ilanAdapter;
 import com.example.friendlypaw.Eklentiler.model;
 
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Realm realm;
     ListView lst;
     List<model> liste;
-    mesajAdapter adp;
+    ilanAdapter adp;
     DrawerLayout drawerLayout;
 
     @Override
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         liste.add(n1);
         liste.add(n2);
         liste.add(n3);
-        adp = new mesajAdapter(liste, this);
+        adp = new ilanAdapter(liste, this);
         lst.setAdapter(adp);
     }
 }

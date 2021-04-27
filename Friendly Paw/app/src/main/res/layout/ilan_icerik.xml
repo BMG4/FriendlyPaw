@@ -8,7 +8,7 @@
     <ImageView
         android:layout_weight="1"
         android:layout_width="0dp"
-        android:id="@+id/kisiResim"
+        android:id="@+id/ilanResim"
         android:layout_height="100dp"/>
     <LinearLayout
         android:layout_weight="4"
@@ -17,7 +17,7 @@
         android:layout_height="100dp">
         <TextView
             android:layout_width="match_parent"
-            android:id="@+id/kisiIsim"
+            android:id="@+id/ilanbaslık"
             android:background="#4513"
             android:textColor="@color/black"
             android:layout_height="wrap_content"/>
@@ -26,7 +26,7 @@
             android:background="#132"
             android:textColor="@color/white"
             android:layout_width="match_parent"
-            android:id="@+id/mesajIcerik"
+            android:id="@+id/ilanIcerik"
             android:layout_height="wrap_content"/>
 
 

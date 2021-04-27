@@ -1,30 +1,30 @@
 package com.example.friendlypaw.Eklentiler;
 
 public class model {
-    private String mesajIcerik;
-    private String kisi;
+    private String ilanIcerik;
+    private String ilanBaslik;
     private int resimID;
 
-    public model(String mesajIcerik, String kisi, int resimID) {
-        this.mesajIcerik = mesajIcerik;
-        this.kisi = kisi;
+    public model(String ilanIcerik, String ilanBaslik, int resimID) {
+        this.ilanIcerik = ilanIcerik;
+        this.ilanBaslik = ilanBaslik;
         this.resimID = resimID;
     }
 
-    public String getMesajIcerik() {
-        return mesajIcerik;
+    public String getIlanIcerik() {
+        return ilanIcerik;
     }
 
-    public void setMesajIcerik(String mesajIcerik) {
-        this.mesajIcerik = mesajIcerik;
+    public void setIlanIcerik(String ilanIcerik) {
+        this.ilanIcerik = ilanIcerik;
     }
 
-    public String getKisi() {
-        return kisi;
+    public String getIlanBaslik() {
+        return ilanBaslik;
     }
 
-    public void setKisi(String kisi) {
-        this.kisi = kisi;
+    public void setIlanBaslik(String ilanBaslik) {
+        this.ilanBaslik = ilanBaslik;
     }
 
     public int getResimID() {

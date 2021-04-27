@@ -3,8 +3,8 @@ package com.example.friendlypaw.Tablolar;
 import io.realm.RealmObject;
 
 public class Adres extends RealmObject {
-    private int adresID,uyeID;
-    private String il,ilce,sokak,mahalle,aciklama;
+    private int adresID, uyeID;
+    private String AdresBaslik, il, ilce, sokak, mahalle, aciklama;
 
     public int getAdresID() {
         return adresID;
@@ -62,11 +62,20 @@ public class Adres extends RealmObject {
         this.aciklama = aciklama;
     }
 
+    public String getAdresBaslik() {
+        return AdresBaslik;
+    }
+
+    public void setAdresBaslik(String adresBaslik) {
+        AdresBaslik = adresBaslik;
+    }
+
     @Override
     public String toString() {
         return "Adres{" +
                 "adresID=" + adresID +
                 ", uyeID=" + uyeID +
+                ", AdresBaslik='" + AdresBaslik + '\'' +
                 ", il='" + il + '\'' +
                 ", ilce='" + ilce + '\'' +
                 ", sokak='" + sokak + '\'' +
