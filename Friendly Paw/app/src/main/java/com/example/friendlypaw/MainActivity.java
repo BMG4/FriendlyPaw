@@ -12,15 +12,17 @@ import android.widget.ListView;
 
 import com.example.friendlypaw.Eklentiler.ilanAdapter;
 import com.example.friendlypaw.Eklentiler.model;
+import com.example.friendlypaw.Tablolar.Ilan;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import io.realm.Realm;
+import io.realm.RealmResults;
 
 public class MainActivity extends AppCompatActivity {
     Realm realm;
-    ListView lst;
+    ListView listView;
     List<model> liste;
     ilanAdapter adp;
     DrawerLayout drawerLayout;
@@ -30,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tanımla();
-        doldur();
+        //doldur();
     }
 
     public void tanımla() {
         realm = Realm.getDefaultInstance();
-        lst = findViewById(R.id.Listview);
+        listView = findViewById(R.id.Listview);
         drawerLayout = findViewById(R.id.drawelayout);
     }
 
@@ -85,6 +87,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void doldur() {
+        realm.beginTransaction();
+        RealmResults<Ilan> sonuc = realm.where(Ilan.class).findAll();
+        List<model> list;
+        if (sonuc.size()>0){
+            ilanAdapter ilanAdapter = new ilanAdapter(sonuc,getApplicationContext());
+            listView.setAdapter(ilanAdapter);
+        }
+        realm.commitTransaction();
+/*
         liste = new ArrayList<>();
         model n1 = new model("Golden cinsi Köpek", "Osman Çagrı Karekulak", R.drawable.ic_launcher_foreground);
         model n2 = new model("Akıllı tekir kedi", "Furkan Berk", R.drawable.ic_launcher_foreground);
@@ -93,6 +104,6 @@ public class MainActivity extends AppCompatActivity {
         liste.add(n2);
         liste.add(n3);
         adp = new ilanAdapter(liste, this);
-        lst.setAdapter(adp);
+        lst.setAdapter(adp);*/
     }
 }

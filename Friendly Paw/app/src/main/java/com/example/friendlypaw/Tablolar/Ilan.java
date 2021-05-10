@@ -1,71 +1,69 @@
 package com.example.friendlypaw.Tablolar;
 
-import java.sql.Array;
-
 import io.realm.RealmObject;
 
 public class Ilan extends RealmObject {
-    private int ilanID,uyeID,AdresID;
-    private Array resimler;
-    private String baslik,aciklama;
+    int ilanid,uyeid,adresid;
+   String Baslik,Aciklama,Resimler;
 
-    public int getIlanID() {
-        return ilanID;
+    public String getResimler() {
+        return Resimler;
     }
 
-    public void setIlanID(int ilanID) {
-        this.ilanID = ilanID;
+    public void setResimler(String resimler) {
+        Resimler = resimler;
     }
 
-    public int getUyeID() {
-        return uyeID;
+    public int getIlanid() {
+        return ilanid;
     }
 
-    public void setUyeID(int uyeID) {
-        this.uyeID = uyeID;
+    public void setIlanid(int ilanid) {
+        this.ilanid = ilanid;
     }
 
-    public int getAdresID() {
-        return AdresID;
+    public int getUyeid() {
+        return uyeid;
     }
 
-    public void setAdresID(int adresID) {
-        AdresID = adresID;
+    public void setUyeid(int uyeid) {
+        this.uyeid = uyeid;
     }
 
-    public Array getResimler() {
-        return resimler;
+    public int getAdresid() {
+        return adresid;
     }
 
-    public void setResimler(Array resimler) {
-        this.resimler = resimler;
+    public void setAdresid(int adresid) {
+        this.adresid = adresid;
     }
+
 
     public String getBaslik() {
-        return baslik;
+        return Baslik;
     }
 
     public void setBaslik(String baslik) {
-        this.baslik = baslik;
+        Baslik = baslik;
     }
 
     public String getAciklama() {
-        return aciklama;
+        return Aciklama;
     }
 
     public void setAciklama(String aciklama) {
-        this.aciklama = aciklama;
+        Aciklama = aciklama;
     }
 
     @Override
     public String toString() {
         return "Ilan{" +
-                "ilanID=" + ilanID +
-                ", uyeID=" + uyeID +
-                ", AdresID=" + AdresID +
-                ", resimler=" + resimler +
-                ", baslik='" + baslik + '\'' +
-                ", aciklama='" + aciklama + '\'' +
+                "ilanid=" + ilanid +
+                ", uyeid=" + uyeid +
+                ", adresid=" + adresid +
+                ", Baslik='" + Baslik + '\'' +
+                ", Aciklama='" + Aciklama + '\'' +
+                ", Resimler='" + Resimler + '\'' +
                 '}';
     }
 }

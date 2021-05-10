@@ -9,17 +9,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.friendlypaw.R;
+import com.example.friendlypaw.Tablolar.Ilan;
 
 import java.util.List;
 
+import io.realm.RealmResults;
+
 public class ilanAdapter extends BaseAdapter {
-    List<model> list;
+    List<Ilan> list;
     Context context;
 
-    public ilanAdapter(List<model> list, Context context) {
+    public ilanAdapter(List<Ilan> list, Context context) {
         this.list = list;
         this.context = context;
     }
+
 
     @Override
     public int getCount() {
@@ -38,16 +42,14 @@ public class ilanAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View layout = LayoutInflater.from(context).inflate(R.layout.ilan_icerik,parent,false);
-        ImageView img= layout.findViewById(R.id.ilanResim);
-        TextView icerik=layout.findViewById(R.id.ilanIcerik);
-        TextView baslik=layout.findViewById(R.id.ilanbaslık);
-
-        img.setImageResource(list.get(position).getResimID());
-        icerik.setText(list.get(position).getIlanIcerik());
-        baslik.setText(list.get(position).getIlanBaslik());
+        convertView = LayoutInflater.from(context).inflate(R.layout.ilan_icerik,parent,false);
+        ImageView img= convertView.findViewById(R.id.ilanResim);
+        TextView icerik=convertView.findViewById(R.id.ilanIcerik);
+        TextView baslik=convertView.findViewById(R.id.ilanbaslık);
+        icerik.setText(list.get(position).getAciklama());
+        baslik.setText(list.get(position).getBaslik());
 
 
-        return layout;
+        return convertView;
     }
 }
