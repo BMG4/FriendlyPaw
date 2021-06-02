@@ -30,7 +30,7 @@ public class Signup extends AppCompatActivity {
         Surname = findViewById(R.id.sgnupSurname);
         Mail = findViewById(R.id.sgnupMail);
         Password = findViewById(R.id.sngupPassword);
-        Number = findViewById(R.id.sngupPassword);
+        Number = findViewById(R.id.sgnupPhone);
     }
 
     public void ClickLogin(View view) {

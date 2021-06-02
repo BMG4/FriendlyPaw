@@ -5,19 +5,28 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class Hakkinda extends AppCompatActivity {
     DrawerLayout drawerLayout;
+    TextView txtHakkinda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hakkinda);
         tanımla();
+        String Hakkimda = "Bu proje BMG4 dersi için hazırlanmıştır." +
+                "Hazırlayanlar" +
+                "Mehmet Emin ŞAHAN No:02150001069" +
+                "Osman Çağrı KARAKULAK No:02150001041";
+        txtHakkinda.setText(Hakkimda);
     }
 
     public void tanımla() {
         drawerLayout = findViewById(R.id.drawelayout);
+        txtHakkinda = findViewById(R.id.textHakkinda);
+
     }
 
     public void ClickMenu(View view) {
